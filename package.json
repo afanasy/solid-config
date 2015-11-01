@@ -1,0 +1,22 @@
+{
+  "name": "solid-config",
+  "version": "1.0.1",
+  "description": "Config reader",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afanasy/solid-config.git"
+  },
+  "author": "Afanasii Kurakin <afanasy@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afanasy/solid-config/issues"
+  },
+  "homepage": "https://github.com/afanasy/solid-config",
+  "dependencies": {
+    "underscore": "1.8.3",
+    "find-package-json": "1.0.0"
+  }
+}
