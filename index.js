@@ -10,7 +10,7 @@ if (!packageJson.value)
   return
 
 _.each([
-  __dirname + '/config',
+  path.dirname(packageJson.value.__path) + '/config',
   os.homedir() + '/.' + packageJson.value.name,
   os.homedir() + '/.' + packageJson.value.name + '/config'
 ],
