@@ -16,4 +16,4 @@ function (configPath) {
   fs.writeFileSync(configPath + '.json', JSON.stringify(_.object([[configPath, true]])))
 })
 
-assert.equal(_.size(require('./')), 3)
+assert.equal(_.size(require('./')), 4)

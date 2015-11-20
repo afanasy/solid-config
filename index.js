@@ -9,6 +9,8 @@ var
 if (!packageJson.value)
   return
 
+_.extend(config, packageJson.value[packageJson.value.name])
+
 _.each([
   path.dirname(packageJson.value.__path) + '/config',
   os.homedir() + '/.' + packageJson.value.name,
