@@ -11,10 +11,17 @@ if (!packageJson.value)
 
 _.extend(config, packageJson.value[packageJson.value.name])
 
+var homedir = os.homedir()
+if (process.env.UPSTART_JOB) {
+  var m = packageJson.value.__path.match(/^(\/home\/[^\/]+?)\//)
+  if (m)
+    homedir = m[1]
+}
+
 _.each([
   path.dirname(packageJson.value.__path) + '/config',
-  os.homedir() + '/.' + packageJson.value.name,
-  os.homedir() + '/.' + packageJson.value.name + '/config'
+  homedir + '/.' + packageJson.value.name,
+  homedir + '/.' + packageJson.value.name + '/config'
 ],
 function (path) {
   try {_.extend(config, require(path + '.json'))}
